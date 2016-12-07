@@ -1,0 +1,28 @@
+import java.util.*;
+public class palindrome {
+	public static void main(String[] args) {
+		Scanner console=new Scanner(System.in);
+		System.out.print("Write a word:");
+		String input=console.next();
+		String sum="";
+		char x=' ';
+		String b="";
+		int a=input.length();
+		boolean test=true;
+		while(test) {
+			x=input.charAt(a-1);
+			a--;
+			b=""+x;
+			sum=sum+b;
+			if(a==0) {
+				test=false;
+			}
+		}
+		if(input.equalsIgnoreCase(sum)) {
+			System.out.println("palindrome");
+		} else {
+			System.out.println("not palindrome");
+		}
+	
+	}
+}
